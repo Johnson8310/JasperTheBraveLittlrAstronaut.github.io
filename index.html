@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jasper: The Brave Little Astronaut</title>
+
+  <style>
+
+    body {
+
+      margin: 0;
+
+      font-family: 'Poppins', sans-serif;
+
+      background: #0d1b2a;
+
+      color: #fff;
+
+      overflow-x: hidden;
+
+    }
+
+
+
+    h1, h2, h3 {
+
+      margin: 0;
+
+    }
+
+
+
+    a {
+
+      text-decoration: none;
+
+      color: #fff;
+
+    }
+
+
+
+    /* 🌌 Hero Section */
+
+    .hero {
+
+      height: 100vh;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      align-items: center;
+
+      background: linear-gradient(to bottom, #0d1b2a, #1b263b);
+
+      text-align: center;
+
+      position: relative;
+
+      overflow: hidden;
+
+    }
+
+
+
+    .hero h1 {
+
+      font-size: 3em;
+
+      color: #fff;
+
+      text-shadow: 0px 0px 25px #ffdf00, 0px 0px 40px #ff8c00;
+
+      animation: glow 3s infinite alternate;
+
+    }
+
+
+
+    .hero p {
+
+      font-size: 1.2em;
+
+      margin: 15px 0 30px;
+
+      max-width: 600px;
+
+    }
+
+
+
+    .btn {
+
+      background: #ffdf00;
+
+      color: #0d1b2a;
+
+      padding: 12px 30px;
+
+      border-radius: 30px;
+
+      font-weight: bold;
+
+      transition: all 0.3s;
+
+    }
+
+
+
+    .btn:hover {
+
+      background: #ffd700;
+
+      transform: scale(1.1);
+
+    }
+
+
+
+    @keyframes glow {
+
+      from { text-shadow: 0px 0px 15px #ffd700; }
+
+      to { text-shadow: 0px 0px 35px #ffa500; }
+
+    }
+
+
+
+    /* ✨ About Section */
+
+    .about {
+
+      padding: 60px 20px;
+
+      background: #1b263b;
+
+      text-align: center;
+
+    }
+
+
+
+    .about h2 {
+
+      font-size: 2em;
+
+      margin-bottom: 20px;
+
+    }
+
+
+
+    .about p {
+
+      max-width: 700px;
+
+      margin: auto;
+
+      font-size: 1.1em;
+
+      line-height: 1.6;
+
+    }
+
+
+
+    /* 🌠 Preview Section */
+
+    .preview {
+
+      padding: 50px 20px;
+
+      text-align: center;
+
+      background: #0d1b2a;
+
+    }
+
+    .preview h2 {
+
+      font-size: 2em;
+
+      margin-bottom: 20px;
+
+      color: #ffdf00;
+
+    }
+
+    .preview img {
+
+      max-width: 280px;
+
+      border-radius: 10px;
+
+      margin: 15px;
+
+      box-shadow: 0 0 20px rgba(255, 223, 0, 0.6);
+
+    }
+
+
+
+    /* 👨‍🚀 Characters Section */
+
+    .characters {
+
+      background: radial-gradient(circle at 20% 40%, rgba(138, 43, 226, 0.4), transparent 70%),
+
+                  radial-gradient(circle at 80% 30%, rgba(0, 191, 255, 0.35), transparent 60%),
+
+                  radial-gradient(circle at 50% 80%, rgba(255, 105, 180, 0.3), transparent 70%),
+
+                  #0d1b2a;
+
+      padding: 60px 20px;
+
+      border-radius: 15px;
+
+      position: relative;
+
+      overflow: hidden;
+
+    }
+
+
+
+    .characters-title {
+
+      font-size: 2.5em;
+
+      text-align: center;
+
+      color: #fff;
+
+      margin-bottom: 30px;
+
+      text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+
+    }
+
+
+
+    .character-grid {
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+
+      position: relative;
+
+      z-index: 1;
+
+    }
+
+
+
+    .character-card {
+
+      background: rgba(255, 255, 255, 0.1);
+
+      border-radius: 12px;
+
+      padding: 20px;
+
+      width: 220px;
+
+      text-align: center;
+
+      backdrop-filter: blur(5px);
+
+      transition: transform 0.3s;
+
+    }
+
+    .character-card:hover {
+
+      transform: scale(1.05);
+
+    }
+
+    .character-card img {
+
+      width: 100px;
+
+      height: 100px;
+
+      border-radius: 50%;
+
+      margin-bottom: 15px;
+
+    }
+
+    .character-card h3 {
+
+      margin: 10px 0 5px;
+
+      color: #ffdf00;
+
+    }
+
+    .character-card:nth-child(1) {
+
+      border: 3px solid gold;
+
+      box-shadow: 0px 0px 25px rgba(255, 223, 0, 0.9);
+
+    }
+
+
+
+    /* 📚 Chapters Section */
+
+    .chapters {
+
+      background: #1b263b;
+
+      padding: 60px 20px;
+
+      text-align: center;
+
+    }
+
+
+
+    .chapters h2 {
+
+      font-size: 2.2em;
+
+      margin-bottom: 25px;
+
+      color: #ffdf00;
+
+    }
+
+
+
+    .chapter-list {
+
+      max-width: 600px;
+
+      margin: auto;
+
+      text-align: left;
+
+      line-height: 1.8;
+
+      font-size: 1.1em;
+
+    }
+
+
+
+    .chapter-list p::before {
+
+      content: "📖 ";
+
+    }
+
+
+
+    /* ✉️ Contact Section */
+
+    .contact {
+
+      background: #0d1b2a;
+
+      padding: 40px 20px;
+
+      text-align: center;
+
+    }
+
+
+
+    .contact h2 {
+
+      margin-bottom: 15px;
+
+    }
+
+
+
+    .footer {
+
+      background: #0a192f;
+
+      padding: 15px;
+
+      text-align: center;
+
+      font-size: 0.9em;
+
+      color: #ccc;
+
+    }
+
+    .footer a {
+
+      color: #ffdf00;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <!-- 🌌 Hero -->
+
+  <section class="hero">
+
+    <h1>🚀 Jasper: The Brave Little Astronaut</h1>
+
+    <p>Saving Grandaddy, one galaxy at a time. A heartwarming space adventure for kids ages 5–9.</p>
+
+    <a href="#" class="btn">Buy Now</a>
+
+  </section>
+
+
+
+  <!-- ✨ About -->
+
+  <section class="about">
+
+    <h2>About the Book</h2>
+
+    <p>
+
+      Jasper dreams of becoming an astronaut like his missing Grandaddy.
+
+      Every night under the stars, he imagines adventures across galaxies,
+
+      guided by courage, love, and curiosity. This story blends family,
+
+      wonder, and adventure into a magical journey for children.
+
+    </p>
+
+  </section>
+
+
+
+  <!-- 🌠 Preview Section -->
+
+  <section class="preview">
+
+    <h2>🌠 Book Preview</h2>
+
+    <img src="front-cover.jpg" alt="Front Cover">
+
+    <img src="back-cover.jpg" alt="Back Cover">
+
+    <p>Flip through the adventure! Jasper’s story comes alive with colorful illustrations from cover to cover.</p>
+
+  </section>
+
+
+
+  <!-- 👨‍🚀 Characters -->
+
+  <section class="characters">
+
+    <h2 class="characters-title">Meet the Characters</h2>
+
+    <div class="character-grid">
+
+      <div class="character-card">
+
+        <img src="jasper.jpg" alt="Jasper">
+
+        <h3>Jasper</h3>
+
+        <p>The brave little astronaut with dreams bigger than the stars, full of courage and curiosity.</p>
+
+      </div>
+
+      <div class="character-card">
+
+        <img src="robot.jpg" alt="Robo">
+
+        <h3>Robo</h3>
+
+        <p>A cheerful robot sidekick with glowing eyes, rocket boosters, and a heart of gold.</p>
+
+      </div>
+
+      <div class="character-card">
+
+        <img src="granddaddy.jpg" alt="Grandaddy">
+
+        <h3>Grandaddy</h3>
+
+        <p>A legendary astronaut, missing in space, whose adventures inspire Jasper’s journey.</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- 📚 Chapters -->
+
+  <section class="chapters">
+
+    <h2>Adventure Awaits</h2>
+
+    <div class="chapter-list">
+
+      <p>Chapter One: Stargazer Dreams</p>
+
+      <p>Chapter Two: Tales Of A Cosmic Hero</p>
+
+      <p>Chapter Three: Blueprints & Backyard Rockets</p>
+
+      <p>Chapter Four: Countdown to Adventure</p>
+
+      <p>Chapter Five: Trouble in the Stars</p>
+
+      <p>Chapter Six: Ghost Ship in the Stars</p>
+
+      <p>Chapter Seven: The Captain’s Chair</p>
+
+      <p>Chapter Eight: A Light in the Darkness</p>
+
+      <p>Chapter Nine: The Boy Who Found a Legend</p>
+
+      <p>Chapter Ten: Words That Matter Most</p>
+
+      <p>Chapter Eleven: Building Bridges and Telling Stars</p>
+
+      <p>Chapter Twelve: The Journey Home</p>
+
+      <p>Chapter Thirteen: Heroes Return</p>
+
+      <p>Chapter Fourteen: Under the Same Stars</p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ✉️ Contact -->
+
+  <section class="contact">
+
+    <h2>Written by Kayla Renee Johnson</h2>
+
+    <p>Follow Jasper’s adventure across the stars and beyond. ✨</p>
+
+  </section>
+
+
+
+  <footer class="footer">
+
+    © 2025 Jasper: The Brave Little Astronaut | Written by Kayla Renee Johnson  
+
+    <br>Follow Jasper’s journey on <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a>
+
+  </footer>
+
+
+
+</body>
+
+</html>
+
